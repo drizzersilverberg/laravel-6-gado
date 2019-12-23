@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+    \Cache::store('redis')->put('Laradock', 'Awesome', 100);
     return view('welcome');
 });
